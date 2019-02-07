@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='second.css') }}">
+    <title>Sucre&Sweets</title>
+</head>
+
+<body>
+    <div class="l-container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg">
+            <div class="back"></div>
+            <button class="navbar-toggler navbar-toggler-right" height="100%" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" width="0.5" height="100%" class="d-inline-block align-top" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('final_first')}}">sucreとは</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('second')}}">sucre&sweets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('search')}}">プチTwitter検索</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="contents">
+            <h1 class="ml5">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters letters-left">Sucre</span>
+                    <span class="letters ampersand">&amp;</span>
+                    <span class="letters letters-right">Sweets</span>
+                    <span class="line line2"></span>
+                </span>
+            </h1>
+
+            <h2>このページは......</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <img src="{{url_for('static', filename='sweets_phpto.jpg')}}" alt="表示できなかった。。。 ">
+
+            <div class="button">
+                <a href="{{ url_for( 'final')}} " class="btn btn-outline-secondary btn-lg ">TOP</a>
+            </div>
+        </div>
+
+        <footer>
+            <small>
+                Copyright@
+                <a href="{{ url_for('final_first')}}">sucre</a>
+            </small>
+        </footer>
+    </div>
+
+    <script type="module" src="../static/second.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://hrdtbs.github.io/basic-example-of-html-css-javascript/assets/imsky-holder/holder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(".l-container").each(function () {
+                const $scrollTop = $(window).scrollTop();
+                const $header = $(this).find(".navbar, .navbar-toggleable-md, .navbar-light bg"), $navOffsetTop = $header.offset().top;
+                const $window = $(window);
+
+                $window.on("scroll", function (event) {
+                    const $scrollTop = $(this).scrollTop();
+
+                    if ($scrollTop >= $navOffsetTop) {
+                        $header.addClass("sticky");
+                    } else {
+                        $header.removeClass("sticky");
+                    }
+                });
+                $window.trigger("scroll");
+            });
+        });
+        $(function () {
+
+
+            $(window).on('load resize', function () {
+
+                var w = $(window).width();
+                var x = 570;
+
+                if (w <= x) {
+                    $(".line").addClass("erase");
+                } else {
+                    $(".line").removeClass("erase");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+<!-- 参考：http://tobiasahlin.com/moving-letters/#5
+    https://easings.net/ja
+    https://try-m.co.jp/blog/web-create/510/
+    
+ -->
+
+</html>

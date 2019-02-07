@@ -1,0 +1,55 @@
+body{
+    background-color: lightcyan;
+}
+
+nav{
+    background-color: skyblue;
+    opacity:0.9;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color:white;
+}
+
+.nav-link{
+    font-size:30px;
+}
+
+.sticky{
+    position:sticky;
+    top:0;
+    z-index: 999;
+}
+
+.contents{
+    margin: 15px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.top-image{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.button{
+    text-align: center;
+}
+
+footer{
+    height: 80px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+small{
+    color: white;
+}

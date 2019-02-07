@@ -1,0 +1,129 @@
+body{
+    background-color: lightcyan;
+}
+
+nav{
+    background-color: skyblue;
+    opacity:0.9;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color:white;
+}
+
+.slideshow{
+    height: 40vw;
+    min-width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-slides{
+    height: 100%;
+    position:absolute;
+    width: 100%;
+}
+.slideshow-slides .slide{
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width:100%;
+}
+
+.slideshow-slides .slide img {
+    position: absolute;
+}
+
+.slideshow-nav a,
+.slideshow-indicator a{
+    background-color: rgba(0,0,0,0);
+}
+.slideshow-nav a{
+    position:absolute;
+    top: 42%;
+    color:black;
+    font-size:2em;
+}
+
+.slideshow-nav a.prev{
+    left: 50px;
+}
+
+.slideshow-nav a.next{
+    right: 50px;
+}
+
+.slideshow-nav a.disabled{
+    display: none;
+}
+
+.slideshow-indicator{
+    bottom: 30px;
+    left:0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.slideshow-indicator a{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid black;
+    border-radius: 50px;
+    color:black;
+}
+
+.slideshow-indicator a.active{
+    cursor: default;
+    background-color: black;
+    text-decoration: none;
+}
+.slideshow-indicator a:before{
+    margin-left: -110px;
+}
+
+.slideshow-indicator a.active:before{
+    margin-left: -130px;
+}
+
+.contents, .details{
+    margin:15px;
+}
+
+.sticky{
+    position:sticky;
+    top:0;
+    z-index: 999;
+}
+
+.nav-link{
+    font-size:30px;
+}
+
+.return-top{
+    text-align: center;
+}
+
+footer{
+    height: 80px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+small{
+    color: white;
+}
+
