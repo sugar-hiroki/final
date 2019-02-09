@@ -1,0 +1,57 @@
+  body{
+    background-color: lightcyan !important;
+  }
+  
+  .navbar, .navbar-toggleable-md, .navbar-light bg{
+    background-color: skyblue;
+    opacity:0.9;
+  }
+  
+  .sticky{
+    position:sticky;
+    top:0;
+    z-index: 999;
+  }
+  
+.navbar-nav , .mr-auto{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+li{
+    text-decoration: none;
+    margin-right: 10px
+  }
+  
+.nav-link{
+    font-size:30px;
+  }
+
+form{
+    text-align: center;
+}
+
+.contents{
+  margin: 15px;
+}
+
+.button{
+    text-align: center;
+}
+
+footer{
+    height: 80px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+small{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+  color:white;
+}

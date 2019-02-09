@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sotugyo-se-saku!?!?!!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type=text/css href="{{ url_for('static', filename='final.css') }}">
+</head>
+
+<body>
+    <div class="l-container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg">
+            <button class="navbar-toggler navbar-toggler-right" height="100%" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" width="0.5" height="100%" class="d-inline-block align-top" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('final_first')}}">sucreとは
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('second')}}">sucre&sweets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('search')}}">プチTwitter検索</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="slideshow">
+                <div class="slideshow-slides">
+                    <a class="slide" id="slide-1">
+                        <img id="holder" src="{{url_for('static', filename='sucre-image.jpg')}}" alt="First">
+                    </a>
+                    <a class="slide" id="slide-2">
+                        <img id="holder" src="{{url_for('static', filename='cake.jpg')}}" alt="Second">
+                    </a>
+                    <a class="slide" id="slide-3">
+                        <img id="holder" data-src="holder.js/1600x700?theme=sky&text=Twitter" alt="Third">
+                    </a>
+                </div>
+
+                <div class="slideshow-nav">
+                    <a href="#" class="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="slideshow-indicator"></div>
+            </div>
+
+            <div class="contents">
+                <h1>卒業制作！</h1>
+
+                <h2>卒業制作つくってみた！</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+
+
+                <h3>sucreとは</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <div class="details">
+                    <a href="{{ url_for('final_first')}}" class="btn btn-outline-info">more</a>
+                </div>
+
+                <h3>sucre&sweets</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <div class="details">
+                    <a href="{{ url_for('second')}}" class="btn btn-outline-info">more</a>
+                </div>
+
+                <h3>プチTwitter検索</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <div class="details">
+                    <a href="{{ url_for('search')}}" class="btn btn-outline-info">more</a>
+                </div>
+
+                <div class="button return-top">
+                    <a href="#" class="btn btn-outline-secondary btn-lg">TOP</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <small>
+                Copyright@
+                <a href="{{ url_for('final_first')}}">sucre</a>
+            </small>
+        </footer>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://hrdtbs.github.io/basic-example-of-html-css-javascript/assets/imsky-holder/holder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(".slideshow").each(function () {
+                const $container = $(this);
+                const $slideGroup = $container.find(".slideshow-slides");
+                const $slides = $slideGroup.find(".slide");
+                const $nav = $container.find(".slideshow-nav");
+                const $indicator = $container.find(".slideshow-indicator");
+                const slideCount = $slides.length;
+                const duration = 500;
+                const interval = 7500;
+                let indicatorHTML = "";
+                let currentIndex = 0;
+                let timer;
+                const $navPrev = $nav.find(".prev");
+                const $navNext = $nav.find(".next");
+
+                updateNav();
+
+                $slides.each(function (index) {
+                    $(this).css({
+                        left: 100 * index + '%'
+                    });
+                    let id = $(this).attr('id');
+                    indicatorHTML += '<a href="#' + id + '">' + '</a > ';
+                });
+                $indicator.html(indicatorHTML);
+
+                const $indicatorValues = $indicator.find("a");
+
+                let updateContent = (index) => {
+                    $indicatorValues.removeClass('active');
+                    $indicatorValues.eq(index).addClass('active');
+                    currentIndex = index;
+                };
+
+                updateContent(0);
+
+                function goToSlide(index) {
+
+                    $slideGroup.animate({
+                        left: index * -100 + '%',
+                    }, 500);
+                    currentIndex = index;
+                    updateContent(index);
+                };
+
+                function updateNav() {
+                    if (currentIndex === 0) {
+                        $navPrev.addClass('disabled');
+                    } else {
+                        $navPrev.removeClass('disabled');
+                    }
+
+                    if (currentIndex === slideCount - 1) {
+                        $navNext.addClass('disabled');
+                    } else {
+                        $navNext.removeClass('disabled');
+                    }
+
+                };
+
+                let startTimer = () => {
+                    timer = setInterval(function () {
+                        let nextIndex = (currentIndex + 1) % slideCount;
+                        updateContent(nextIndex);
+                        updateNav(currentIndex);
+                        goToSlide(currentIndex);
+                    }, interval)
+                }
+
+                let stopTimer = () => {
+                    clearInterval(timer);
+                }
+
+                $nav.on("click", "a", function (event) {
+                    event.preventDefault();
+
+                    if ($(this).hasClass('prev')) {
+                        updateContent(currentIndex - 1);
+                        updateNav(currentIndex - 1);
+                        goToSlide(currentIndex);
+                    } else {
+                        updateContent(currentIndex + 1);
+                        updateNav(currentIndex + 1);
+                        goToSlide(currentIndex);
+                    }
+                });
+
+                $indicator.on("click", "a", function (event) {
+                    event.preventDefault();
+                    if (!$indicator.hasClass('do')) {
+                        updateContent($(this).index());
+                        updateNav(currentIndex);
+                        goToSlide(currentIndex);
+                    }
+                });
+
+                $container.on({
+                    mouseover: stopTimer,
+                    mouseout: startTimer
+                });
+                startTimer();
+            })
+        });
+
+        $(function () {
+            $(".l-container").each(function () {
+
+                const $scrollTop = $(window).scrollTop();
+                const $container = $(this);
+                const $header = $container.find("nav"), $navOffsetTop = $header.offset().top;
+                const $window = $(window);
+                const $button = $container.find(".return-top");
+
+                $button.on("click", "a", function (event) {
+                    event.preventDefault();
+
+                    $("html").animate({
+                        scrollTop: 0
+                    }, 500);
+                });
+
+                $window.on("scroll", function (event) {
+                    const $scrollTop = $(this).scrollTop();
+
+                    if ($scrollTop >= $navOffsetTop) {
+                        $header.addClass("sticky");
+                    } else {
+                        $header.removeClass("sticky");
+                    }
+                });
+                $window.trigger("scroll");
+            });
+        });
+    </script>
+</body>
+
+</html>
