@@ -37,7 +37,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\Sato\Documents\final\env"
+=======
+VIRTUAL_ENV="C:\Users\Sato\Documents\codeship\final\env"
+>>>>>>> origin/master
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -4,7 +4,6 @@ from requests_oauthlib import OAuth1Session
 from flask import Flask, render_template, request, url_for
 
 
-
 app = Flask(__name__)
 
 @app.route('/', methods=["GET","POST"])
