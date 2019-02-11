@@ -1,6 +1,8 @@
+from __future__ import unicode_literals
 import json, setting
 from requests_oauthlib import OAuth1Session
 from flask import Flask, render_template, request, url_for
+
 
 
 app = Flask(__name__)
