@@ -2,9 +2,14 @@ from __future__ import unicode_literals
 import json, setting
 from requests_oauthlib import OAuth1Session
 from flask import Flask, render_template, request, url_for
-
+import logging
+import os
+import sys
 
 app = Flask(__name__)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 @app.route('/', methods=["GET","POST"])
 def final():
