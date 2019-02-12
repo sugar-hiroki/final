@@ -52,7 +52,7 @@ def search():
                     # print(tweet['created_at'])
                     # print('------------------------------')
             else:
-                print("ERROR: %d" req.status_code)
+                print("ERROR: %d" % req.status_code)
             return render_template("index.html", keyword=keyword, search_timeline = search_timeline)
 
 if __name__ == '__main__':
