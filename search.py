@@ -37,7 +37,7 @@ def search():
 
 
     if request.method == "GET":
-        return render_template("index.html", keyword=keyword, search_timeline = search_timeline)
+        return render_template("index.html")
 
     if request.method == "POST":
         if "search" in request.form.keys():
