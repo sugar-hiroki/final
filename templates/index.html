@@ -55,7 +55,7 @@
                         <p>{{tweet['created_at']}}</p>
                     </li>
                     {% endfor %} {% endif %} {% if error %}
-                    <p>{{error}}</p>
+                    <p>{{"ERROE: %d" % req.status_code}}</p>
                     {% endif %}
                 </ul>
             </nav>
