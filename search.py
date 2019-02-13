@@ -50,8 +50,8 @@ def search():
                     # print(tweet['user']['name'] + '::' + tweet['text'])
                     # print(tweet['created_at'])
                     # print('------------------------------')
-            else:
-                print("ERROR: %d" % req.status_code)
+            # else:
+            #     print("ERROR: %d" % req.status_code)
             return render_template("index.html", keyword=keyword, search_timeline = search_timeline)
         return render_template("index.html", keyword=keyword, search_timeline = search_timeline)
 
